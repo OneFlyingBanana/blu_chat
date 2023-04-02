@@ -18,9 +18,10 @@ class Communication {
 
       // Creates a listener to receive data
       connection.input.listen(onDataReceived).onDone(() {});
+
+      // Catch connection errors
     }).catchError((error) {
       print('Cannot connect, exception occured');
-      print(error);
     });
   }
 
@@ -33,11 +34,14 @@ class Communication {
         backspacesCounter++;
       }
     });
-    Uint8List buffer = Uint8List(data.length - backspacesCounter);
-    int bufferIndex = buffer.length;
 
     // Apply backspace control character
+    // ASCII code 08 and 127 represent "backspace" and "DELETE"
+    // We need to handle them correctly
+    Uint8List buffer = Uint8List(data.length - backspacesCounter);
+    int bufferIndex = buffer.length;
     backspacesCounter = 0;
+
     for (int i = data.length - 1; i >= 0; i--) {
       if (data[i] == 8 || data[i] == 127) {
         backspacesCounter++;
@@ -66,6 +70,7 @@ class Communication {
     }
   }
 
+// End connection
   Future<void> dispose() async {
     fls.setPairingRequestHandler(null);
     if (connection.isConnected) {

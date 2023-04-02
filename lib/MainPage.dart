@@ -22,6 +22,7 @@ class _MainPage extends State<MainPage> {
   @override
   void initState() {
     super.initState();
+    // Request all permissions on startup
     _requestBluetoothPermissions();
     // Get current state
     FlutterBluetoothSerial.instance.state.then((state) {
@@ -165,6 +166,7 @@ class _MainPage extends State<MainPage> {
   }
 
   Future<void> _requestBluetoothPermissions() async {
+    // Declaration and call of all needed permissions
     PermissionStatus statusBluetooth = await Permission.bluetooth.status;
     PermissionStatus statusLocation = await Permission.location.status;
     PermissionStatus statusBluetoothConnect =
@@ -173,6 +175,7 @@ class _MainPage extends State<MainPage> {
     PermissionStatus statusAdvertise =
         await Permission.bluetoothAdvertise.status;
 
+    // Check if all permissions have been given and wait until they have
     if (statusBluetooth.isDenied ||
         statusLocation.isDenied ||
         statusBluetoothConnect.isDenied ||
