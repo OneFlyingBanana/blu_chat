@@ -49,10 +49,10 @@ INJECTED from F:\Programming\Flutter Projects\blu_chat\android\app\src\debug\And
 		INJECTED from F:\Programming\Flutter Projects\blu_chat\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
 		ADDED from F:\Programming\Flutter Projects\blu_chat\android\app\src\main\AndroidManifest.xml:1:11-69
-uses-permission# android.permission.INTERNET 
-ADDED from F:\Programming\Flutter Projects\blu_chat\android\app\src\main\AndroidManifest.xml:3:5-71
+uses-permission#android.permission.INTERNET 
+ADDED from F:\Programming\Flutter Projects\blu_chat\android\app\src\main\AndroidManifest.xml:3:5-68
 	android:name
-		ADDED from F:\Programming\Flutter Projects\blu_chat\android\app\src\main\AndroidManifest.xml:3:22-68
+		ADDED from F:\Programming\Flutter Projects\blu_chat\android\app\src\main\AndroidManifest.xml:3:22-65
 uses-permission#android.permission.BLUETOOTH
 ADDED from F:\Programming\Flutter Projects\blu_chat\android\app\src\main\AndroidManifest.xml:4:5-68
 MERGED from [:flutter_bluetooth_serial] F:\Programming\Flutter Projects\blu_chat\build\flutter_bluetooth_serial\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-68

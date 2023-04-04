@@ -168,6 +168,7 @@ class _ChatPage extends State<ChatPage> {
         backspacesCounter++;
       }
     });
+
     Uint8List buffer = Uint8List(data.length - backspacesCounter);
     int bufferIndex = buffer.length;
 
